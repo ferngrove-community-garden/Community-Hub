@@ -107,13 +107,17 @@ a {
 .site-nav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  min-width: 0;
   border-radius: 9999px;
   border: 3px solid var(--border);
   padding: 0.75rem 1.1rem;
   font-size: 0.95rem;
   font-weight: 800;
+  line-height: 1.1;
   text-decoration: none;
+  text-align: center;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -172,6 +176,10 @@ a {
   outline-offset: 2px;
 }
 
+textarea.field-input {
+  line-height: 1.5;
+}
+
 .status-chip {
   display: inline-flex;
   align-items: center;
@@ -200,6 +208,19 @@ a {
 
 .plot-card .section-title {
   line-height: 0.95;
+}
+
+@media (max-width: 640px) {
+  .site-nav-link,
+  .cartoon-button,
+  .cartoon-button-secondary {
+    width: 100%;
+  }
+
+  .status-chip {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
 }
 
 .status-chip-leaf {

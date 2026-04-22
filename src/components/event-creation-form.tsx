@@ -47,10 +47,10 @@ export function EventCreationForm() {
   return (
     <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
       <div className="cartoon-panel rounded-[2rem] p-6 sm:p-8">
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row">
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Event builder</p>
-            <h2 className="section-title mt-3 text-4xl font-semibold text-[var(--leaf-deep)] sm:text-5xl">
+            <h2 className="section-title mt-3 text-3xl leading-tight font-semibold text-[var(--leaf-deep)] sm:text-4xl lg:text-5xl">
               Create a new event
             </h2>
           </div>
@@ -165,13 +165,13 @@ export function EventCreationForm() {
             </select>
           </label>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <button type="submit" className="cartoon-button justify-center sm:min-w-52">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <button type="submit" className="cartoon-button w-full justify-center sm:min-w-52 sm:w-auto">
               Save event draft
             </button>
             <button
               type="button"
-              className="cartoon-button-secondary justify-center sm:min-w-52"
+              className="cartoon-button-secondary w-full justify-center sm:min-w-52 sm:w-auto"
               onClick={() => {
                 setDraft(defaultEvent);
                 setSaved(false);
@@ -188,7 +188,7 @@ export function EventCreationForm() {
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Preview</p>
           <div className="mt-4 rounded-[1.5rem] border-3 border-[var(--border)] bg-[rgba(255,255,255,0.7)] p-5">
             <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-[var(--muted)]">{draft.category}</p>
-            <h3 className="section-title mt-3 text-3xl font-semibold text-[var(--leaf-deep)]">{draft.title}</h3>
+            <h3 className="section-title mt-3 text-2xl leading-tight font-semibold text-[var(--leaf-deep)] sm:text-3xl">{draft.title}</h3>
             <p className="mt-3 text-base font-bold text-[var(--leaf-deep)]">{previewDate}</p>
             <p className="mt-1 text-sm font-bold text-[var(--muted)]">
               {draft.startTime} - {draft.endTime} at {draft.location}

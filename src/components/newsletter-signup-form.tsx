@@ -17,7 +17,7 @@ export function NewsletterSignupForm() {
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-xl">
           <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Join the list</p>
-          <h2 className="section-title mt-3 text-4xl font-semibold text-[var(--leaf-deep)] sm:text-5xl">
+          <h2 className="section-title mt-3 text-3xl leading-tight font-semibold text-[var(--leaf-deep)] sm:text-4xl lg:text-5xl">
             Sign up for garden updates
           </h2>
           <p className="mt-4 text-lg leading-8 text-[var(--muted)]">
@@ -25,7 +25,7 @@ export function NewsletterSignupForm() {
             admins can manage subscribers for real.
           </p>
         </div>
-        <div className="rounded-[1.5rem] border-3 border-[var(--border)] bg-[rgba(255,255,255,0.65)] px-4 py-3 text-sm font-bold text-[var(--leaf-deep)]">
+        <div className="w-full max-w-md rounded-[1.5rem] border-3 border-[var(--border)] bg-[rgba(255,255,255,0.65)] px-4 py-3 text-sm font-bold text-[var(--leaf-deep)] lg:w-auto">
           Double opt-in and consent text can be added when the mailing backend is connected.
         </div>
       </div>

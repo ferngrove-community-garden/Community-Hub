@@ -16,14 +16,14 @@ const featureCards = [
     href: "/newsletter",
   },
   {
+    title: "Garden updates",
+    text: "A simple place to share seasonal progress, volunteer news, and small stories from the site.",
+    href: "/updates",
+  },
+  {
     title: "Plot allocation",
     text: "A clear way to show which plots are active, shared, available, or on the waiting list.",
     href: "/plots",
-  },
-  {
-    title: "Garden admin",
-    text: "An admin area for events, waiting lists, and eventually member tools and communications.",
-    href: "/admin",
   },
 ];
 
@@ -66,7 +66,7 @@ export default async function Home() {
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {featureCards.map((item) => (
           <Link key={item.href} href={item.href} className="cartoon-panel rounded-[1.7rem] p-5 transition-transform duration-200 hover:-translate-y-1">
-            <p className="section-title text-3xl font-semibold text-[var(--leaf-deep)]">{item.title}</p>
+            <p className="section-title text-2xl leading-tight font-semibold text-[var(--leaf-deep)] sm:text-3xl">{item.title}</p>
             <p className="mt-3 text-base leading-7 text-[var(--muted)]">{item.text}</p>
           </Link>
         ))}
@@ -127,7 +127,7 @@ export default async function Home() {
               <li>Real admin login with Supabase Auth.</li>
               <li>Database-backed event creation and editing.</li>
               <li>Live newsletter signup sync to Brevo.</li>
-              <li>Plot assignment history and waiting list actions.</li>
+              <li>Published garden updates and seasonal notices.</li>
             </ul>
           </div>
           <div className="cartoon-panel relative min-h-[280px] overflow-hidden rounded-[1.7rem] bg-[var(--surface-strong)] p-3">

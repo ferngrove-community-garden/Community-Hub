@@ -24,6 +24,7 @@ export type PlotItem = {
 export const publicNavigation = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
+  { href: "/updates", label: "Updates" },
   { href: "/newsletter", label: "Newsletter" },
   { href: "/plots", label: "Plots" },
 ];
@@ -185,4 +186,31 @@ export const adminTasks = [
   "Review waiting list before plot A3 is offered.",
   "Send this month's newsletter draft to the board.",
   "Add accessibility notes for the next open garden event.",
+];
+
+export const gardenUpdates = [
+  {
+    slug: "spring-beds-filling-up",
+    title: "Spring beds are filling up fast",
+    date: "24 April 2026",
+    category: "Seasonal update",
+    excerpt:
+      "Fresh salad leaves, early flowers, and new seedlings are bringing the main beds back to life after the colder months.",
+  },
+  {
+    slug: "volunteer-day-ready",
+    title: "Volunteer day planned for early May",
+    date: "21 April 2026",
+    category: "Volunteer call",
+    excerpt:
+      "We are organising a shared garden tidy-up with mulching, path work, and plenty of tea breaks along the way.",
+  },
+  {
+    slug: "newsletter-starting",
+    title: "The garden newsletter is taking shape",
+    date: "18 April 2026",
+    category: "Website progress",
+    excerpt:
+      "The new website now includes a newsletter page so local supporters can keep up with seasonal changes and upcoming sessions.",
+  },
 ];

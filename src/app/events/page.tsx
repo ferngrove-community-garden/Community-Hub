@@ -67,7 +67,7 @@ export default async function EventsPage() {
 
       <section className="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
         <div className="cartoon-panel rounded-[2rem] p-6 sm:p-8">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Calendar view</p>
               <h2 className="section-title mt-3 text-4xl font-semibold text-[var(--leaf-deep)] sm:text-5xl">May 2026</h2>
@@ -75,7 +75,7 @@ export default async function EventsPage() {
             <span className="status-chip status-chip-sky">8 events scheduled</span>
           </div>
 
-          <div className="mt-6 grid grid-cols-7 gap-2">
+          <div className="mt-6 hidden grid-cols-7 gap-2 md:grid">
             {weekLabels.map((label) => (
               <div key={label} className="text-center text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--muted)]">
                 {label}
@@ -108,6 +108,19 @@ export default async function EventsPage() {
                 </div>
               );
             })}
+          </div>
+
+          <div className="mt-6 grid gap-3 md:hidden">
+            {events.map((event) => (
+              <div key={event.slug} className="rounded-[1.3rem] border-3 border-[var(--border)] bg-[rgba(255,255,255,0.65)] p-4">
+                <div className="flex flex-wrap gap-2">
+                  <span className="status-chip status-chip-sky">{formatDate(event.date)}</span>
+                  <span className="status-chip status-chip-sun">{event.time}</span>
+                </div>
+                <p className="section-title mt-3 text-2xl font-semibold text-[var(--leaf-deep)]">{event.title}</p>
+                <p className="mt-2 text-sm font-bold text-[var(--muted)]">{event.location}</p>
+              </div>
+            ))}
           </div>
         </div>
 

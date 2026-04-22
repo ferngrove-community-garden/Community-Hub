@@ -2,6 +2,7 @@ import {
   adminStats,
   adminTasks,
   events,
+  gardenUpdates,
   newsletterTopics,
   plots,
   plotSummary,
@@ -32,6 +33,10 @@ export async function listAdminTasks() {
 
 export async function listNewsletterTopics() {
   return newsletterTopics;
+}
+
+export async function listGardenUpdates() {
+  return gardenUpdates;
 }
 
 export async function listQuickBits() {
